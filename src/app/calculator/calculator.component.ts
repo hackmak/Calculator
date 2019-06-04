@@ -19,11 +19,12 @@ export class CalculatorComponent {
       num2:[null, Validators.required],
     });
   }
-  add(x, y) {
-    console.log(x+y);
-    let solution=x+y;
-    this.solution=x+y;
+  add(x, y):number {
+    console.log(this.x+this.y);
+    let solution=this.x+this.y;
+    this.solution=this.x+this.y;
     console.log(this.solution.value);
+    return this.solution;
   }
 
   subtract(x, y) {
@@ -34,20 +35,13 @@ export class CalculatorComponent {
     return x*y;
   }
 
-  isZero(num) {
-    if(num==0){
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+
   divide (x, y) {
     if (y === 0) {
-      console.warn('Cannot divide by 0!');
+      alert('Cannot divide by 0!');
     }
     else {
-      return x/y;
+      console.log(x/y);
     }
   }
 

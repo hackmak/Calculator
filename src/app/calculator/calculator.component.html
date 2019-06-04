@@ -1,0 +1,13 @@
+<h1>Calculator</h1>
+<form [formGroup]="inputForm">
+  <div><input type="number" formControlName="num1"></div>
+  <div><input type="number" formControlName="num2"></div>
+</form>
+<p class="solution">Answer: {{solution}}</p>
+<div class="operations">
+  <button (click)="add(num1,num2)">Add</button>
+  <button>Subtract</button>
+  <button>Multiply</button>
+  <button (click)="divide()">Divide</button>
+</div>
+<div><button (click)="reset()">Clear</button></div>

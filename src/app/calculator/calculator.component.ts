@@ -8,9 +8,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CalculatorComponent {
   inputForm;
-  x:number;
-  y:number;
-  solution:number;
+  x;
+  y;
+  solution;
   constructor(
     private formBuilder: FormBuilder,
   ) { 
@@ -22,7 +22,8 @@ export class CalculatorComponent {
   add(x, y) {
     console.log(x+y);
     let solution=x+y;
-    console.log(this.solution);
+    this.solution=x+y;
+    console.log(this.solution.value);
   }
 
   subtract(x, y) {

@@ -2,12 +2,13 @@
 <form [formGroup]="inputForm">
   <div><input type="number" formControlName="num1" required></div>
   <div><input type="number" formControlName="num2" required></div>
-</form>
-<p class="solution">Answer: {{solution}}</p>
-<div class="operations">
-  <button type="submit" [disabled]="inputForm.invalid" (click)="add(num1,num2)">Add</button>
-  <button type="submit" [disabled]="inputForm.invalid">Subtract</button>
-  <button type="submit" [disabled]="inputForm.invalid">Multiply</button>
-  <button type="submit" [disabled]="isZero(num2) || inputForm.invalid" (click)="divide()">Divide</button>
-</div>
+  <p class="solution">Answer: {{solution}}</p>
+  <div class="operations">
+    <button type="submit" [disabled]="inputForm.invalid" (ngSubmit)="add(this.num1.value,this.num2.value)">Add</button>
+    <button type="submit" [disabled]="inputForm.invalid">Subtract</button>
+    <button type="submit" [disabled]="inputForm.invalid">Multiply</button>
+    <button type="submit" [disabled]="inputForm.invalid" (click)="divide()">Divide</button>
+  </div>
 <div><button (click)="reset()">Clear</button></div>
+</form>
+

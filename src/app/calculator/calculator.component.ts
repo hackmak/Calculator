@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -15,8 +15,8 @@ export class CalculatorComponent {
     private formBuilder: FormBuilder,
   ) { 
     this.inputForm = this.formBuilder.group({
-      num1:null,
-      num2:null,
+      num1:[null, Validators.required],
+      num2:[null, Validators.required],
     });
   }
   add(x, y) {
@@ -33,6 +33,14 @@ export class CalculatorComponent {
     return x*y;
   }
 
+  isZero(num) {
+    if(num==0){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
   divide (x, y) {
     if (y === 0) {
       console.warn('Cannot divide by 0!');

@@ -17,11 +17,14 @@ export class CalculatorComponent {
       num2:[null, Validators.required],
     });
   }
+  
+  /* debug function
   print(){
     console.log(this.inputForm);
     console.log(this.inputForm.controls.num1.value);
     console.log(this.inputForm.controls.num2.value);
   }
+  */
 
   add(x, y) {
     this.solution = this.inputForm.controls.num1.value+this.inputForm.controls.num2.value;

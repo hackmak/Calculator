@@ -1,4 +1,4 @@
-/* styles, insiration Angular's shopping example */
+/* styles, inspiration taken from Angular's shopping example */
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
@@ -14,17 +14,7 @@ body {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-router-outlet + *  {
-  padding: 0 16px;
-}
-
 /* Text */
-
 h1 {
   font-size: 32px;
 }
@@ -37,24 +27,24 @@ h1, h2 {
   font-weight: lighter;
 }
 
-p {
-  font-size: 14px;
+/*
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 
+    "input1 | ."
+    ". | solution"
+    "input2 | .";
+    
 }
-
-/* Hyperlink */
-
-a {
-  cursor: pointer;
-  color: #1976d2;
-  text-decoration: none;
+*/
+/*
+.container {
+  display:flex;
+  align-items: center;
 }
-
-a:hover {
-  opacity: 0.8;
-}
-
+*/
 /* Input */
-
 input {
   font-size: 14px;
   border-radius: 2px;
@@ -63,21 +53,53 @@ input {
   border: 1px solid #BDBDBD;
 }
 
+/* for responsive layouts */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+.num1, .num2 {
+  padding-right: 200px;
+}
+/*
+.num1 {
+  //flex:auto; 
+ 
+}
+
+.num2 {
+  //flex:auto;
+
+}
+*/
 .solution {
   
+  width: 200px;
+  padding-bottom: 700px;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
+.operations {
+  padding-top: 100px;
 }
 
 /* Button */
 .button, button {
-  display: inline-flex;
+  display: inline-grid;
+  grid-column-gap: 4;
   align-items: center;
   padding: 8px 32px;
-  border-radius: 2px;
+  border-radius: 0px;
   font-size: 14px;
   cursor: pointer;
   background-color: #007a7a;
   color: white;
-  border: none;
+  border-color:#007a7a;
 }
 
 .button:hover, button:hover {
@@ -89,10 +111,3 @@ input {
   opacity: 0.5;
   cursor: auto;
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

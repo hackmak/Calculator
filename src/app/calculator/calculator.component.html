@@ -1,15 +1,16 @@
 <h1>Calculator</h1>
-<form [formGroup]="inputForm">
-  <div><input type="number" formControlName="num1" required></div>
-  <div><input type="number" formControlName="num2" required></div>
-  <p class="solution">Answer: {{solution}}</p>
-  <div class="operations">
+<div class="container">
+  <form [formGroup]="inputForm">
+    <div class="num1"><input type="number" formControlName="num1" required></div>
+    <div class="num2"><input type="number" formControlName="num2" required></div>
+    <div class="solution">Answer: {{solution}}</div>
+  </form>
+</div>
+<div class="operations">
     <button type="submit" [disabled]="inputForm.invalid" (click)="add(num1, num2)">Add</button>
     <button type="submit" [disabled]="inputForm.invalid" (click)="subtract(num1, num2)" >Subtract</button>
     <button type="submit" [disabled]="inputForm.invalid" (click)="multiply(num1, num2)">Multiply</button>
     <button type="submit" [disabled]="inputForm.invalid || this.inputForm.controls.num2.value == 0" (click)="divide(num1, num2)">Divide</button>
   </div>
-<div><button (click)="reset()">Clear</button></div>
-<button (click)="print()">Debug</button>
-</form>
-
+<br><div><button (click)="reset()">Clear</button></div>
+<!-- debug button <button (click)="print()">Debug</button> -->

@@ -7,7 +7,7 @@
     <button type="submit" [disabled]="inputForm.invalid" (click)="add(num1, num2)">Add</button>
     <button type="submit" [disabled]="inputForm.invalid" (click)="subtract(num1, num2)" >Subtract</button>
     <button type="submit" [disabled]="inputForm.invalid" (click)="multiply(num1, num2)">Multiply</button>
-    <button type="submit" [disabled]="inputForm.invalid" (click)="divide(num1, num2)">Divide</button>
+    <button type="submit" [disabled]="inputForm.invalid || this.inputForm.controls.num2.value == 0" (click)="divide(num1, num2)">Divide</button>
   </div>
 <div><button (click)="reset()">Clear</button></div>
 <button (click)="print()">Debug</button>

@@ -26,15 +26,9 @@ export class CalculatorComponent {
   add(x, y) {
     this.solution = this.inputForm.controls.num1.value+this.inputForm.controls.num2.value;
     return this.solution;
-   /* console.log(this.x+this.y);
-    let solution=this.x+this.y;
-    this.solution=this.x+this.y;
-    console.log(this.solution.value);
-    return this.solution;
-    */
   }
 
-  subtract(x, y):number {
+  subtract(x, y) {
     this.solution = this.inputForm.controls.num1.value-this.inputForm.controls.num2.value;
     return this.solution;
   }
@@ -46,13 +40,9 @@ export class CalculatorComponent {
 
 
   divide (x, y) {
-    if (y === 0) {
-      alert('Cannot divide by 0!');
-    }
-    else {
-      this.solution = this.inputForm.controls.num1.value/this.inputForm.controls.num2.value;
+    // divide by 0 error handled in html - won't allow division when num2 == 0
+    this.solution = this.inputForm.controls.num1.value/this.inputForm.controls.num2.value;
     return this.solution;
-    }
   }
 
   reset() {

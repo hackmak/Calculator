@@ -4,11 +4,12 @@
   <div><input type="number" formControlName="num2" required></div>
   <p class="solution">Answer: {{solution}}</p>
   <div class="operations">
-    <button type="submit" [disabled]="inputForm.invalid" (ngSubmit)="add(this.num1.value,this.num2.value)">Add</button>
-    <button type="submit" [disabled]="inputForm.invalid">Subtract</button>
-    <button type="submit" [disabled]="inputForm.invalid">Multiply</button>
-    <button type="submit" [disabled]="inputForm.invalid" (click)="divide()">Divide</button>
+    <button type="submit" [disabled]="inputForm.invalid" (click)="add(num1, num2)">Add</button>
+    <button type="submit" [disabled]="inputForm.invalid" (click)="subtract(num1, num2)" >Subtract</button>
+    <button type="submit" [disabled]="inputForm.invalid" (click)="multiply(num1, num2)">Multiply</button>
+    <button type="submit" [disabled]="inputForm.invalid" (click)="divide(num1, num2)">Divide</button>
   </div>
 <div><button (click)="reset()">Clear</button></div>
+<button (click)="print()">Debug</button>
 </form>
 

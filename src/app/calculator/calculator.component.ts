@@ -8,8 +8,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CalculatorComponent {
   inputForm;
-  x;
-  y;
   solution;
   constructor(
     private formBuilder: FormBuilder,
@@ -19,20 +17,31 @@ export class CalculatorComponent {
       num2:[null, Validators.required],
     });
   }
-  add(x, y):number {
-    console.log(this.x+this.y);
+  print(){
+    console.log(this.inputForm);
+    console.log(this.inputForm.controls.num1.value);
+    console.log(this.inputForm.controls.num2.value);
+  }
+
+  add(x, y) {
+    this.solution = this.inputForm.controls.num1.value+this.inputForm.controls.num2.value;
+    return this.solution;
+   /* console.log(this.x+this.y);
     let solution=this.x+this.y;
     this.solution=this.x+this.y;
     console.log(this.solution.value);
     return this.solution;
+    */
   }
 
-  subtract(x, y) {
-    return x-y;
+  subtract(x, y):number {
+    this.solution = this.inputForm.controls.num1.value-this.inputForm.controls.num2.value;
+    return this.solution;
   }
 
   multiply(x, y) {
-    return x*y;
+    this.solution = this.inputForm.controls.num1.value*this.inputForm.controls.num2.value;
+    return this.solution;
   }
 
 
@@ -41,7 +50,8 @@ export class CalculatorComponent {
       alert('Cannot divide by 0!');
     }
     else {
-      console.log(x/y);
+      this.solution = this.inputForm.controls.num1.value/this.inputForm.controls.num2.value;
+    return this.solution;
     }
   }
 

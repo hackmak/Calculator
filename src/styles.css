@@ -70,7 +70,7 @@ input {
 }
 
 .solution {
-  max-width: 175px;
+  /*max-width: 175px;*/
   font-size: 14px;
   border-radius: 2px;
   padding: 8px;

@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-body {
-  margin: 0;
-}
-
 /* Text */
 h1 {
   font-size: 32px;
@@ -27,23 +23,6 @@ h1, h2 {
   font-weight: lighter;
 }
 
-/*
-.container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: 
-    "input1 | ."
-    ". | solution"
-    "input2 | .";
-    
-}
-*/
-/*
-.container {
-  display:flex;
-  align-items: center;
-}
-*/
 /* Input */
 input {
   font-size: 14px;
@@ -59,24 +38,22 @@ input {
     width: 100%;
   }
 }
-.num1, .num2 {
-  padding-right: 200px;
-}
-/*
-.num1 {
-  //flex:auto; 
- 
+
+.col {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
-.num2 {
-  //flex:auto;
-
+.right {
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-*/
+
 .solution {
-  
   width: 200px;
-  padding-bottom: 700px;
   font-size: 14px;
   border-radius: 2px;
   padding: 8px;
@@ -85,7 +62,7 @@ input {
 }
 
 .operations {
-  padding-top: 100px;
+  padding-top: 15px;
 }
 
 /* Button */

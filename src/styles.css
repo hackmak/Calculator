@@ -45,25 +45,19 @@ h1, h2 {
 
 /* desktop layout */
 @media only screen and (min-width: 600px) {
-  .col {
-    
-    
-  }
   .left {
-    width: 50%;
+
     float:left;
-    padding-right:150px;
+    width:50%;
+    margin: 0 -55%;
   }
   .right {
-    width: 50%;
     float:right;
-    padding-top:25px;
+    min-width:150px;
+    padding-top: 25px;
+    margin-left:100px;
+    position:fixed;
   }
-  
-  /*.operations {
-    padding-top: 111px;
-  }
-  */
 }
 
 /* Input */

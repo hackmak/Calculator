@@ -39,15 +39,19 @@ input {
   }
 }
 
+/*
 .col {
   display:grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   grid-gap: 1rem;
 }
+*/
 .left {
-  
+  width: 50%;
+  float:left;
 }
+/*
 .num-1 {
   display:grid;
   align-items:right;
@@ -58,13 +62,19 @@ input {
   display:grid;
   align-items:left;
 }
-
+*/
+/*
 .right {
   display:flex;
   align-items:center;
   justify-content:center;
 }
-
+*/
+.right {
+  width: 50%;
+  float:right;
+  padding-top:25px;
+}
 .solution {
   width: 200px;
   font-size: 14px;
@@ -75,7 +85,7 @@ input {
 }
 
 .operations {
-  padding-top: 15px;
+  padding-top: 111px;
 }
 
 /* Button */
